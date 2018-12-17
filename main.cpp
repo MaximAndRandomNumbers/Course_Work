@@ -17,12 +17,12 @@ namespace fs = std::experimental::filesystem;
 
 
 int main(size_t count, char ** args) {
-	
-	
+		
 	GlobalData& gb = GlobalData::getObject();
 	//проверяем данные из входных аргументов и инициализируем статические переменные
 	if (!ArgumentsValidator::CheckAndSetArgs(count, args)) {
 		cout << "Error in input data" << endl;
+		system("pause");
 		return 0;
 	}
 	//вектор песен, содержащихся в исходной папке
